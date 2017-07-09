@@ -6,8 +6,8 @@ class OrgCard extends Component {
     super(props);
 
     this.state = {
-      picture: 'http://www.theslothinstitutecostarica.org/wp-content/uploads/2014/08/Jon-Snow.jpg',
-      title: 'Org Name',
+      image: props.image,
+      title: props.title,
       text: 'Org description'
     };
   }
@@ -16,7 +16,7 @@ class OrgCard extends Component {
     return (
       <Card>
         <CardMedia>
-          <img src={this.state.picture} alt="" />
+          <img src={this.state.image} alt="" />
         </CardMedia>
         <CardTitle title={this.state.title} />
         <CardText>{this.state.text}</CardText>

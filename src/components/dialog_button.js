@@ -11,14 +11,19 @@ const customContentStyle = {
 
 const styles = {
   raisedButton: {
-    'margin-right': '10px'
+    marginRight: '10px'
   }
 };
 
 class DialogButton extends Component {
-  state = {
-    open: false,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false,
+      tile: props.tile
+    };
+  }
 
   handleOpen = () => {
     this.setState({open: true});
@@ -46,7 +51,7 @@ class DialogButton extends Component {
           contentStyle={customContentStyle}
           open={this.state.open}
         >
-          <OrgCard />
+          <OrgCard image={this.state.tile.img} title={this.state.tile.title} />
         </Dialog>
       </div>
     );
