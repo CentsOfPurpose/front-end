@@ -11,14 +11,19 @@ const customContentStyle = {
 
 const styles = {
   raisedButton: {
-    'margin-right': '10px'
+    marginRight: '10px'
   }
 };
 
 class DialogButton extends Component {
-  state = {
-    open: false,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false,
+      tile: props.tile
+    };
+  }
 
   handleOpen = () => {
     this.setState({open: true});
@@ -30,23 +35,35 @@ class DialogButton extends Component {
 
   render() {
     const actions = [
+      <RaisedButton
+        label="Choose"
+        primary={true}
+        onTouchTap={this.handleClose}
+        style={styles.raisedButton}
+      />,
+      <RaisedButton
+        label="Donate"
+        secondary={true}
+        onTouchTap={this.handleClose}
+        style={styles.raisedButton}
+      />,
       <FlatButton
         label="Close"
         primary={true}
         onTouchTap={this.handleClose}
-      />,
+      />
     ];
 
     return (
       <div>
-        <RaisedButton label="Learn More" onTouchTap={this.handleOpen} style={styles.raisedButton} />
+        <RaisedButton label="Make a Change" onTouchTap={this.handleOpen} style={styles.raisedButton} secondary={true} />
         <Dialog
           actions={actions}
           modal={true}
           contentStyle={customContentStyle}
           open={this.state.open}
         >
-          <OrgCard />
+          <OrgCard image={this.state.tile.img} title={this.state.tile.title} description={this.state.tile.description} />
         </Dialog>
       </div>
     );
