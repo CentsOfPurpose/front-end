@@ -5,6 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './containers/home_page';
+import UserProfile from './containers/user_profile';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -16,6 +17,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div>
       <Switch>
+        <Route path="/user" component={UserProfile} />
         <Route path="/" component={HomePage} />
       </Switch>
     </div>
