@@ -25,7 +25,7 @@ const styles = {
 class Plaid extends Component {
   handleOnSuccess = (token, metadata) => {
     $.post('http://localhost:3000/plaid/access_token', {
-      public_token: token
+      token: token
     }, function() {
       $('#container').fadeOut('fast', function() {
         $('#intro').hide();

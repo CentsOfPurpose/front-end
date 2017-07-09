@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-
+import {StripeProvider} from 'react-stripe-elements';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './containers/home_page';
 import UserProfile from './containers/user_profile';

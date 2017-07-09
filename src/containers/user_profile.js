@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from '../components/nav_bar';
 import TextFieldTest from '../components/user_fields';
+import Transactions from '../components/transactions';
 import ProfilePage from '../components/user_fields'
 
 const muiTheme = getMuiTheme({
@@ -20,6 +21,7 @@ class UserProfile extends Component {
         <div>
           <NavBar />
           <TextFieldTest />
+          <Transactions/>
         </div>
       </MuiThemeProvider>
     );
