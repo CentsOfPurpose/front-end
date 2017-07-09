@@ -3,6 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import OrgCard from './org_card';
+import $ from 'jquery';
 
 const customContentStyle = {
   width: '90%',
@@ -33,6 +34,10 @@ class DialogButton extends Component {
     this.setState({open: false});
   };
 
+  donate = () => {
+    $(".stripe-button-el").click();
+  };
+
   render() {
     const actions = [
       <RaisedButton
@@ -44,7 +49,7 @@ class DialogButton extends Component {
       <RaisedButton
         label="Donate"
         secondary={true}
-        onTouchTap={this.handleClose}
+        onTouchTap={this.donate}
         style={styles.raisedButton}
       />,
       <FlatButton

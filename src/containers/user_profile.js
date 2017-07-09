@@ -3,8 +3,9 @@ import {pink600, pink300} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from '../components/nav_bar';
-import Grid from '../components/grid';
-import Plaid from '../components/plaid_link';
+import TextFieldTest from '../components/user_fields';
+import Transactions from '../components/transactions';
+import ProfilePage from '../components/user_fields'
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -13,18 +14,18 @@ const muiTheme = getMuiTheme({
   }
 });
 
-class HomePage extends Component {
+class UserProfile extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <NavBar />
-          <Plaid />
-          <Grid />
+          <TextFieldTest />
+          <Transactions/>
         </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default HomePage;
+export default UserProfile;

@@ -3615,6 +3615,10 @@ jest@20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -5035,6 +5039,12 @@ react-event-listener@^0.4.5:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
+react-plaid-link@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/react-plaid-link/-/react-plaid-link-0.1.9.tgz#afc7a3dd913da1aa5aafce48c1124382b729c304"
+  dependencies:
+    react-script-loader "0.0.1"
+
 react-router-dom@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.1.1.tgz#3021ade1f2c160af97cf94e25594c5f294583025"
@@ -5055,6 +5065,10 @@ react-router@^4.1.1:
     path-to-regexp "^1.5.3"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-script-loader@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-script-loader/-/react-script-loader-0.0.1.tgz#9e33c88f26ad7a5cd418553a8d2188b9056dd385"
 
 react-scripts@1.0.10:
   version "1.0.10"
