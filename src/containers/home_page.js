@@ -3,7 +3,7 @@ import {lightBlue500} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from '../components/nav_bar';
-import DialogButton from '../components/dialog_button';
+import Grid from '../components/grid';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -17,7 +17,7 @@ class HomePage extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <NavBar />
-          <DialogButton />
+          <Grid />
         </div>
       </MuiThemeProvider>
     );
