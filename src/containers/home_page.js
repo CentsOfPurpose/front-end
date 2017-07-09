@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from '../components/nav_bar';
 import Grid from '../components/grid';
+import Plaid from '../components/plaid_link';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -17,6 +18,7 @@ class HomePage extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <NavBar />
+          <Plaid />
           <Grid />
         </div>
       </MuiThemeProvider>
