@@ -28,9 +28,9 @@ class TextFieldTest extends React.Component {
     super(props);
 
     this.state = {
-      name: 'Johnny Appleseed',
-      age: 33,
-      email:'Johnny@applepicker.com',
+      name: 'Sally Seashells',
+      age: 29,
+      email:'sally@seashellheaven.com',
     };
   }
 
@@ -45,11 +45,6 @@ class TextFieldTest extends React.Component {
   render() {
     return (
       <div>
-      	<div style={styles.label}>
-	      	<h2 style={styles.label}>Total Change collected: $14.64</h2>
-	      	<p style={styles.label}>Total for SF Safehouse: $8.23</p>
-	      	<p style={styles.label}>Total for W.O.M.A.N. Inc: $6.41</p>
-        </div><br/>
         <div style={styles.label}>
 	        <h2 style={styles.label}>User Information</h2>
 	        <label style={styles.label}><b>Name:</b></label><TextField
@@ -67,8 +62,13 @@ class TextFieldTest extends React.Component {
 	          value={this.state.email}
 	          onChange={this.handleChange}
 	        /><br/>
-	        <RaisedButton label="Save Profile" onTouchTap={this.handleOpen} style={styles.label} primary={true} />
+	        <RaisedButton label="Save Profile" onTouchTap={this.handleOpen} style={styles.label} secondary={true} />
         </div>
+      	<div style={styles.label}>
+	      	<h2 style={styles.label}>Total Change collected: $14.64</h2>
+	      	<p style={styles.label}>Total for SF Safehouse: $8.23</p>
+	      	<p style={styles.label}>Total for W.O.M.A.N. Inc: $6.41</p>
+        </div><br/>
       </div>
     );
   }
