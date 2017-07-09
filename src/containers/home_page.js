@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import NavBar from '../components/nav_bar'
 
-export class HomePage extends Component {
+class HomePage extends Component {
   render() {
     return (
-      <div>
-        <h1>Home Page</h1>
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <NavBar />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
