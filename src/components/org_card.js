@@ -8,7 +8,7 @@ class OrgCard extends Component {
     this.state = {
       image: props.image,
       title: props.title,
-      text: 'Org description'
+      description: props.description
     };
   }
 
@@ -19,7 +19,7 @@ class OrgCard extends Component {
           <img src={this.state.image} alt="" />
         </CardMedia>
         <CardTitle title={this.state.title} />
-        <CardText>{this.state.text}</CardText>
+        <CardText>{this.state.description}</CardText>
       </Card>
     );
   }
