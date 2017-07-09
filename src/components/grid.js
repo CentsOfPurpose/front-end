@@ -17,6 +17,9 @@ const styles = {
   },
   image: {
     width: '50%'
+  },
+  gridTile: {
+    'box-shadow': '0 0 1em #ccc'
   }
 };
 
@@ -62,6 +65,7 @@ class Grid extends Component {
               title={tile.title}
               actionIcon={<DialogButton />}
               actionPosition="right"
+              style={styles.gridTile}
             >
               <img src={tile.img} style={styles.image} />
             </GridTile>
